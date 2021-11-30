@@ -27,7 +27,7 @@ export default class CreateExercise extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3006/users/')
+        axios.get('https://grocerylistap.herokuapp.com/users/')
         .then(response => {
             if(response.data.indexOf('error')){
                 toast.error(response.data);
@@ -81,7 +81,7 @@ export default class CreateExercise extends Component {
             date: this.state.date
         };
 
-        axios.post('http://localhost:3006/exercises/add', exercises)
+        axios.post('https://grocerylistap.herokuapp.com/exercises/add', exercises)
         .then(response => {
             if(response.data.indexOf('error')){
                 toast.error(response.data);

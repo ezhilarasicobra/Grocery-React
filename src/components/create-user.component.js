@@ -32,7 +32,7 @@ export default class CreateUser extends Component {
 
         console.log(user);
 
-        axios.post('http://localhost:3006/users/add', user)
+        axios.post('https://grocerylistap.herokuapp.com/users/add', user)
         .then((response) => {
             if(response.data.indexOf('error')){
                 toast.error(response.data);
